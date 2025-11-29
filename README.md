@@ -1,14 +1,10 @@
 ﻿# Examen Final - OCY1102 Ciberseguridad en Desarrollo
 ## Auditoria de Seguridad en Aplicación Web Flask
 
-**ALUMNO** DAVID H. CUEVAS SALGADO 
-
+**ALUMNO:** DAVID H. CUEVAS SALGADO 
 **ASIGNATURA:** OCY1102 - CIBERSEGURIDAD EN DESARROLLO 
-
 **EVALUACIÓN:** EXÁMEN TRANSVERSAL  
-
 **INSTITUCIÓN:** DUOC UC
-
 **FECHA:** 28/11/2025
 
 ---
