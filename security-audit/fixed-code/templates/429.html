@@ -1,0 +1,12 @@
+﻿{% extends 'base.html' %}
+{% block title %}Demasiadas Peticiones{% endblock %}
+{% block content %}
+<div class="text-center mt-5">
+    <h1>429</h1>
+    <h2>Demasiadas Peticiones</h2>
+    <p class="lead">Has excedido el límite de peticiones permitidas.</p>
+    <p>Por favor, espera unos momentos antes de intentar nuevamente.</p>
+    <p class="text-muted">Esta medida de seguridad protege contra ataques de fuerza bruta.</p>
+    <a href="/" class="btn btn-primary mt-3">Volver al inicio</a>
+</div>
+{% endblock %}
