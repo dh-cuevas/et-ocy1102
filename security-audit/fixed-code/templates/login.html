@@ -1,0 +1,38 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Login - Aplicación Segura{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mt-5">Iniciar Sesión</h2>
+        <form method="post">
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                {{ form.username.label(class="form-label") }}
+                {{ form.username(class="form-control") }}
+                {% if form.username.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.username.errors %}{{ error }}{% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="form-group">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+                {% if form.password.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.password.errors %}{{ error }}{% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+        
+        <p class="mt-3"><small>Credenciales de prueba: admin / password</small></p>
+    </div>
+</div>
+{% endblock %}

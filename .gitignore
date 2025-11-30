@@ -34,3 +34,12 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Environment variables (IMPORTANTE)
+.env
+*.env
+!.env.example
+
+# Security audit evidence
+security-audit/evidence/*.png
+security-audit/evidence/*.jpg

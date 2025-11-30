@@ -1,0 +1,21 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Inicio - Aplicación Segura{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Aplicación Flask Segura</h1>
+    <p class="lead">Versión corregida con todas las vulnerabilidades mitigadas</p>
+    <hr class="my-4">
+    <p>Mejoras de seguridad implementadas:</p>
+    <ul>
+        <li> Prevención de SQL Injection mediante consultas parametrizadas</li>
+        <li> Prevención de XSS con sanitización y escape automático</li>
+        <li> Protección CSRF con tokens en todos los formularios</li>
+        <li> Gestión segura de sesiones con SECRET_KEY persistente</li>
+        <li> Debug mode desactivado en producción</li>
+        <li> Headers de seguridad implementados</li>
+    </ul>
+    <a class="btn btn-primary btn-lg" href="/login" role="button">Iniciar Sesión</a>
+</div>
+{% endblock %}

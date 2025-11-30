@@ -1,0 +1,42 @@
+﻿{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">Bienvenido, {{ username }}!</h1>
+
+<div class="card mt-4">
+    <div class="card-header">
+        <h5>Publicar Comentario</h5>
+    </div>
+    <div class="card-body">
+        <form action="/submit_comment" method="post">
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                {{ form.comment.label }}
+                {{ form.comment(class="form-control", rows="3") }}
+                {% if form.comment.errors %}
+                    <div class="invalid-feedback d-block">
+                        {% for error in form.comment.errors %}{{ error }}{% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+    </div>
+</div>
+
+<h2 class="mt-5">Tus Comentarios</h2>
+<ul class="list-group mt-3">
+    {% for comment in comments %}
+        <li class="list-group-item">
+            {{ comment['comment'] }}
+            <small class="text-muted d-block">{{ comment['created_at'] }}</small>
+        </li>
+    {% else %}
+        <li class="list-group-item">No tienes comentarios aún.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
