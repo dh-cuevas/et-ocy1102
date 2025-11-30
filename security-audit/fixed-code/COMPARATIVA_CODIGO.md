@@ -1,13 +1,13 @@
 ﻿# Comparativa Código Vulnerable vs Código Seguro
 
-**Auditor:** David H. Cuevas Salgado  
+**Auditor:** DAVID H. CUEVAS SALGADO
 **Fecha:** 29/11/2025 21:54
 
 ---
 
 ## SQL INJECTION
 
-### ❌ VULNERABLE
+### VULNERABLE
 \\\python
 # vulnerable_flask_app.py
 if "' OR '" in password:
@@ -16,7 +16,7 @@ if "' OR '" in password:
     user = conn.execute(query).fetchone()
 \\\
 
-### ✅ SEGURO
+### SEGURO
 \\\python
 # secure_flask_app.py
 query = "SELECT * FROM users WHERE username = ?"
@@ -30,7 +30,7 @@ if user and check_password_hash(user['password'], password):
 
 ## STORED XSS
 
-### ❌ VULNERABLE
+### VULNERABLE
 \\\python
 # vulnerable_flask_app.py
 comment = request.form['comment']
@@ -59,7 +59,7 @@ conn.execute("INSERT INTO comments (user_id, comment) VALUES (?, ?)", (user_id, 
 
 ## CSRF
 
-### ❌ VULNERABLE
+### VULNERABLE
 \\\html
 <!-- vulnerable_flask_app.py -->
 <form method="post">
@@ -96,7 +96,7 @@ class LoginForm(FlaskForm):
 
 ## GESTIÓN DE SESIONES
 
-### ❌ VULNERABLE
+### VULNERABLE
 \\\python
 # vulnerable_flask_app.py
 app.secret_key = os.urandom(24)  # Regenerada en cada inicio
@@ -119,7 +119,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=1)
 
 ## DEBUG MODE
 
-### ❌ VULNERABLE
+### VULNERABLE
 \\\python
 # vulnerable_flask_app.py
 if __name__ == '__main__':
@@ -144,7 +144,7 @@ if __name__ == '__main__':
 
 ## HASHING DE PASSWORDS
 
-### ❌ VULNERABLE
+### VULNERABLE
 \\\python
 # create_db.py
 import hashlib

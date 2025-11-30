@@ -351,7 +351,7 @@ python secure_flask_app.py
 
 ---
 
-**Auditor:** David H. Cuevas Salgado  
+**Auditor:** DAVID H. CUEVAS SALGADO
 **Fecha:** 29/11/2025 21:51  
 **Estado:** CÓDIGO SEGURO IMPLEMENTADO
 
