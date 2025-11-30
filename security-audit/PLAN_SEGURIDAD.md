@@ -1,7 +1,9 @@
 ﻿# Plan de Seguridad - Aplicación Flask
 
 **Responsable:** DAVID H. CUEVAS SALGADO
+
 **Fecha:** 30/11/2025  
+
 **Versión:** 1.0
 
 ---
